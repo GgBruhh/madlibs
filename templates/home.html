@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
-</head>
-<body>
-    
+{% extends 'base.html' %}
+{% block title %}Greeter Form V2{% endblock %}
+{% block content %}
     <form action="/story" id="story-form">
         {% for promt in prompts %}
         <label for="{{promt}}">{{promt}}</label>
@@ -16,7 +9,4 @@
         <button>Submit</button>
 
     </form>
-
-
-</body>
-</html>
+{% endblock %}
