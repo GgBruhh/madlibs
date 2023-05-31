@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Greeter Form V2{% endblock %}
+{% block content %}
+<h1>Pick a new madlib!</h1>
+
+<form action="/form">
+    <select name="story_id">
+      {% for story in stories %}
+        <option value="{{story.code}}">
+          {{ story.title }}
+        </option>
+      {% endfor %}
+    </select>
+    <button>Go</button>
+  </form>
+{% endblock %}
