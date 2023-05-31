@@ -3,8 +3,8 @@
 {% block content %}
     <form action="/story" id="story-form">
         {% for promt in prompts %}
-        <label for="{{promt}}">{{promt}}</label>
-        <input type="text" name="{{promt}}" id="">
+        <label for="{{promt}}">{{promt}}:</label>
+        <input type="text" name="{{promt}}" id="story-input">
         {% endfor %}
         <input type="hidden" name="story_id" value="{{story_id}}">
         <button>Submit</button>
